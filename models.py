@@ -1,6 +1,7 @@
-from django.db import models
+'''Contains class definitions for Messenger App.
+'''
 
-"""Contains class definitions for Messenger App."""
+from django.db import models
 
 class Message(models.Model):
     """Contains logic and attributes for managing a message

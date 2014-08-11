@@ -1,12 +1,12 @@
-import os
-import shutil
-from setuptools import setup
-
-"""The setuptools setup script.
+'''The setuptools setup script.
 
 README:    The README.md text.
 setup:     The setup meta.
-"""
+'''
+
+import os
+import shutil
+from setuptools import setup
 
 with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
     README = readme.read()
