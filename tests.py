@@ -19,3 +19,7 @@ class MessageTest(TestCase):
 
     def test_message(self):
         self.assertEqual(unicode(self.text), unicode(self.message.text))
+
+
+    def test_fail(self):
+        self.assertFalse(True)
