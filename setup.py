@@ -25,7 +25,7 @@ shutil.copy2('__init__.py', 'package/__init__.py')
 
 setup(
     name='messenger',
-    version='0.1-dev',
+    version='v0.1.0',
     packages=['package'],
     include_package_data=True,
     license='MIT License',
