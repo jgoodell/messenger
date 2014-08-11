@@ -9,7 +9,12 @@ from django.test import TestCase
 
 
 class MessageTest(TestCase):
+    """TestCase sub class for Message.
+    """
+
     def setUp(self):
+        """The test setup method. Run before each test.
+        """
         from datetime import datetime
         from messenger.models import Message
         self.text = "Testing 1... 2... 3..."
@@ -18,9 +23,15 @@ class MessageTest(TestCase):
                                time_stamp=datetime.now())
 
     def test_message(self):
-        self.assertEqual(unicode(self.text), unicode(self.message.text))
+        """Test that message returns unicode text when asked for the
+        unicode representation of the type.
+        """
+        self.assertEqual(unicode(self.text), unicode(self.message))
 
 
     def test_fail(self):
+        """A test designed to fail for helping in build pipeline
+        configuration and development.
+        """
         #self.assertFalse(True)
         pass
