@@ -1,4 +1,4 @@
-# Create your views here.
+from django.http import HttpResponse
 
 def root(request):
-    return "Hello world!"
+    return HttpResponse("Hello world!")
