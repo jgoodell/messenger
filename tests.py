@@ -6,6 +6,7 @@ Replace this with more appropriate tests for your application.
 """
 
 from django.test import TestCase
+from django.test import Client
 
 
 class MessageTest(TestCase):
@@ -22,5 +23,9 @@ class MessageTest(TestCase):
 
 
     def test_fail(self):
-        #self.assertFalse(True)
-        pass
+        self.assertFalse(True)
+
+    def test_view(self):
+        client = Client()
+        response = client.get('/')
+        self.assertNotEqual(response.content, '')
